@@ -13,9 +13,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   // include db connect class
    require_once __DIR__ . '/db_connect.php';
 
-	$aadhar = $_POST['aadhar'];
-
- $sql="SELECT * FROM student WHERE aadhar = $aadhar" ;
+	//$aadhar = $_POST['aadhar'];
+        $semester = $_POST['sem'];
+ $sql="SELECT * FROM student WHERE semester= $semester" ;
  $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   
